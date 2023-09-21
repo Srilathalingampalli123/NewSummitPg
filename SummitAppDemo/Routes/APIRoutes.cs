@@ -5,6 +5,7 @@
         public const string Root = "api";
 
         public const string Customer = Root + "/customers";
+        public const string CustomerFna = Root + "/customerfna";
         public const string CustomerFNAs = Root + "/customerfnas/{id}";
 
         public const string CustomerAddresses = Customer + "/address";

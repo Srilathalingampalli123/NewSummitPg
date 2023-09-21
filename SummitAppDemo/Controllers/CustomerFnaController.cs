@@ -10,7 +10,6 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace SummitAppDemo.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class CustomerFnaController : ControllerBase
     {
@@ -32,7 +31,7 @@ namespace SummitAppDemo.Controllers
        
 
         // POST api/<CustomerFnaController>
-        [HttpPost(APIRoutes.Customer)]
+        [HttpPost(APIRoutes.CustomerFna)]
         [SwaggerResponse(statusCode: 200, type: typeof(CustomerFNAResponse))]
         [ServiceFilter(typeof(ValidationBodyActionFilter))]
         public async Task<IActionResult> CreateCustomerFNA([FromBody] CreateCustomerFnaReq customerreq)
