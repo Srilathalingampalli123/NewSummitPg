@@ -22,9 +22,9 @@ namespace SummitAppDemo.Controllers
         [HttpGet(APIRoutes.CustomerFNAs)]
         [SwaggerResponse(statusCode: 200, type: typeof(CustomerFNAResponse))]
         [ServiceFilter(typeof(ValidationBodyActionFilter))]
-        public async Task<IActionResult> GetCustomerFNAS(String customerid,CancellationToken cancellationToken)
+        public async Task<IActionResult> GetCustomerFNAS([FromQuery]String id,CancellationToken cancellationToken)
         {
-           var res=await _customerFNAInfoService.GetCustomerFnasByCustomerId(customerid,cancellationToken);
+           var res=await _customerFNAInfoService.GetCustomerFnasByCustomerId(id,cancellationToken);
        return Ok(res);
         }
 

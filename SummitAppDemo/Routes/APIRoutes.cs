@@ -6,7 +6,7 @@
 
         public const string Customer = Root + "/customers";
         public const string CustomerFna = Root + "/customerfna";
-        public const string CustomerFNAs = Root + "/customerfnas/{id}";
+        public const string CustomerFNAs = Root + "/customerfnas";
 
         public const string CustomerAddresses = Customer + "/address";
         public const string CustomerAddress = Customer + "/address/{addressId}";
